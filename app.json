@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "jagna_healthlink_app",
-    "slug": "jagna_healthlink_app",
+    "name": "Jagna HealthLink",
+    "slug": "jagna-healthlink",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,18 +13,36 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jagnahealthlink.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to scan QR codes (future feature).",
+        "NSPhotoLibraryUsageDescription": "This app accesses your photo library (future feature)."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "package": "com.jagnahealthlink.app",
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE"
+      ],
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "jagna-healthlink"
+      }
+    },
+    "plugins": [
+      "expo-localization"
+    ]
   }
 }
